@@ -8,5 +8,5 @@ function [O] = vc3_5(I, alpha, deblurSize)
     h(1, 1:half) = 1/half;
     
     hr = imrotate(h, alpha);
-    O = deconvwnr(I, hr, 0);
+    O = deconvreg(I, hr, 0);
 end

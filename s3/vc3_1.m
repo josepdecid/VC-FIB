@@ -11,6 +11,7 @@ function [M] = vc3_1(I)
         M(i, 1) = currentSum / 3;
         currentSum = currentSum + I(i, 4);
         M(i, 2) = currentSum / 4;
+        currentSum = currentSum + I(i, 5);
        
         for j = 3:nCols-3
             M(i, j) = currentSum / 5;
